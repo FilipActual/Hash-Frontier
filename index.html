@@ -23,7 +23,7 @@
         <br />
         <p>Last Updated:</p>
         <br />
-        <p>1/20/2022 by Justin Filip, <a href="http://www.twitter.com/jlfilip">@jlfilip</a> on Twitter</p>
+        <p>1/28/2022 by Justin Filip, <a href="http://www.twitter.com/jlfilip">@jlfilip</a> on Twitter</p>
         <br /><br />
         <div class="title">
             <h1>The Full Stack Field Guide to</h1>
@@ -48,19 +48,14 @@
         <b>Briefing:</b>
         <br /><br />
         <blockquote class="indent">
-            1) You’ve spent a good amount of time reading about Bitcoin. You know that Bitcoin is both the most secure and most flexible commodity to ever exist thanks to its definitively finite nature and portability characteristics.
-
-            <br /><br />You know Bitcoin’s network is the most reliable and secure payments network to ever exist thanks to open-source cooperation over time between Satoshi Nakamoto, the Bitcoin Core developers, miners, and node operators, made many
-            times more powerful and scalable than VISA’s payments network thanks to the available layer 2 implementations of the lightning network protocol.
-
-            <br /><br />You are aware of a few different applications built to support and provide a range of accessibility features to the users of the network, enabling it to become a de facto framework for commerce and a higher-level operational framework
-            for an economy in a society.
-
-            <br /><br /> 2) In the spirit of sovereignty, you want to know how to set up all the infrastructure to run a full node, your own private pool or connection to a mining pool for solo mining (Bitcoin Lottery), a lightning network node, and you
-            want to do it all on one relatively inexpensive machine with a disaster scenario mitigation plan.
+            1) You know that Bitcoin is both the most secure and most reliable payments network to ever exist thanks to its definitively finite supply, decentralized network, and portability of private keys. All made possible by open-source cooperation over time
+            between Satoshi Nakamoto, the Bitcoin Core volunteer developers, miners, and node operators, made many times more powerful and scalable than VISA’s payments network thanks to the available layer 2 implementations of the lightning network protocol.
+            In fact, Bitcoin's network just surpassed VISA's in terms of total volume transacted annually.
+            <br /><br /> 2) You also have done a Bitcoin transaction with a wallet on your phone and can confirm it is no harder, and in fact somewhat easier, to use than Venmo and you want to know how to set up all the infrastructure to run a full node,
+            your own private pool or connection to a mining pool for solo mining (Bitcoin Lottery), a lightning network node, and you want to do it all on one relatively inexpensive machine with a disaster scenario mitigation plan.
         </blockquote>
         <br /><br />
-        <i>I was too.</i>
+        <i>I did too.</i>
         <br /><br /> I took some time while deploying this stuff to condense everything that I’ve learned into one spot in order to save you a SIGNIFICANT amount of time researching and debugging, for free, in hopes that it will bridge the gap to the
         coming surge of individual decentralized mining and network implementation specialists that can help others further, redundantly secure the network. It would be beneficial for hash rate decentralization to continue well into the future.
         <br><br><br>
@@ -92,7 +87,7 @@
         <!--  -->
         <!--  -->
 
-        <b>A. Hardware Requirements and Configuration</b>
+        <a href="#hardware-requirements-and-configuration"><b>Hardware Requirements and Configuration</b></a>
         <br /><br /> 1) Get and Configure a Computer
         <br /><br />
         <blockquote class="indent">
@@ -117,7 +112,7 @@
             <br /> b. What settings need to be changed?
         </blockquote>
         <br /><br />
-        <b>B. Software Requirements and Configuration</b>
+        <a href="#software-requirements-and-configuration"><b>Software Requirements and Configuration</b></a>
         <br /><br /> 1) Install the Prerequisite Packages
         <br /><br /> 2) Install the Bitcoin Core Client (<a href="http://www.bitcoin.org">bitcoin.org</a>)
         <br /><br />
@@ -139,7 +134,7 @@
             <br /> b. How do I confirm that it is working?
         </blockquote>
         <br /><br />
-        <b>C. Disaster Scenario Preparation</b>
+        <a href="#disaster-scenario-preparation"><b>Disaster Scenario Preparation</b></a>
         <br /><br /> 1) What If the Power Goes Out?
         <br /><br />
         <blockquote class="indent">a. UPS battery backups</blockquote>
@@ -155,7 +150,9 @@
         <!--  -->
         <!--  -->
 
-        <h1>Hardware Requirements and Configuration</h1>
+        <a id="hardware-requirements-and-configuration">
+            <h1>Hardware Requirements and Configuration</h1>
+        </a>
         <br /><br />
         <h3><i>Get and Configure a Computer</i></h3>
         <br /><br /> You will need a separate machine to run everything on, I do not suggest deploying all of this on a machine that you use even semi-regularly in order to avoid accidents and configuration conflicts. This “server” we’re setting up should
@@ -204,7 +201,8 @@
         <br /> The goal is to never let anything interfere with Bitcoin Core or any of the other applications we’re installing.
         <br /><br /> You don’t have to, but I like to turn off the Bluetooth radio as well because it shouldn’t ever be needed.
         <br /><br /><br />
-        <h3><i><a id="solo_content_shortcut_target">Get and Re-flash an ASIC Miner</a></i></h3>
+        <h3><i><a id="solo_content_shortcut_target">Get and Re-flash an ASIC Miner</a></i>
+        </h3>
         <div id="solo_content_body" class="solo_content_shortcut">
             <br /><br /> If you want to mine Bitcoin, you’re going to need an ASIC (Application Specific Integrated Circuit) device designed specifically for mining. It will cost you ~$500 for one of the devices I'll be using in this guide, and you'll
             want to make sure it includes a power supply or buy one separately.
@@ -272,7 +270,7 @@
         <br /><br /> We’re going to point the miner at a solo mining pool known as
         <a href="https://solo.ckpool.org/">ckpool</a>. Visit the miner configuration tab of your S9's web interface by visiting the local IP address of the miner in a browser. You can get the IP address from your router's DHCP server client list, likely
         in the advanced settings or under "LAN" in the <a href="https://www.lifewire.com/accessing-your-router-at-home-818205#:~:text=Do%20this%20by%20typing%20the,and%20access%20the%20admin%20settings.">web portal</a>, enter the details as follows for
-        the pool information, not including the “(” and “)” characters. The remaining slots on the dashboard can be left blank: <br /><br /> Address: <code>colo.ckpool.org:3333</code>
+        the pool information, not including the “(” and “)” characters. The remaining slots on the dashboard can be left blank: <br /><br /> Address: <code>solo.ckpool.org:3333</code>
         <br /> User: (A Bitcoin Receiving Address. You can generate one from any Bitcoin wallet where you are the sole custodian of the private key.)
         <br /> Password: (Literally anything you want, just not blank)
         <br /><br /> After a few minutes, your miner will sound like it is ramping down. This means the initial checks are complete and it is about to start hashing. Continually refresh the miner status page to see new information about what the miner
@@ -321,7 +319,9 @@
         <!--  -->
 
         <br /><br /><br />
-        <h1>Software Requirements and Configuration</h1>
+        <a id="software-requirements-and-configuration">
+            <h1>Software Requirements and Configuration</h1>
+        </a>
         <br /><br />
         <h3><i>Install the Prerequisite Packages</i></h3>
         <br /><br /> 1) On the computer you’re intending to set everything up on, you’ll need to install a few packages that are required by all the applications we’re about to install. You can do this all in one go by running the following command in
@@ -334,6 +334,7 @@
         libboost-program-options-dev libboost-test-dev libboost-thread-dev
         libminiupnpc-dev libdb5.3++ libdb5.3++-dev libzmq3-dev qt5-default
         qttools5-dev-tools golang-go</code>
+        <br><br>Many prompts will appear, to which you'll basically just need to say yes.
         <br /><br /> 2) You’ll also need to set some networking defaults in Ubuntu. Run this command in the terminal:
         <br /><br />
         <code>sudo ufw allow ssh && sudo ufw allow 8332 && sudo ufw allow 8333 &&
@@ -345,7 +346,7 @@
         iptables-save</code>
         <br /><br /> 3) Then, we’ll need to install NodeJS and Redis:
         <br /><br />
-        <code>sudo snap install node --channel=13 –classic && sudo snap install
+        <code>sudo snap install node --channel=14 --classic && sudo snap install
         redis</code>
         <br /><br /><br />
         <h3><i>Install the Bitcoin Core Client (<a href="http://www.bitcoin.org">bitcoin.org</a>)</i></h3>
@@ -354,12 +355,12 @@
         <br /><br /> We are going to build Bitcoin Core from scratch so that we can include a few extras that are required to run an LND lightning node.
         <br /><br />
         <blockquote class="indent">
-            1) Open a terminal and run the following command:
+            1) Open a terminal and run the following command with the version (v22.0) of your choice from Bitcoin's <a href="https://github.com/bitcoin/bitcoin/releases">git repository releases page</a>:
             <br /><br />
-            <code>sudo git clone -b v0.21.1 https://github.com/bitcoin/bitcoin.git &&
-          cd bitcoin && ./autogen.sh && ./configure --enable-cxx --with-zmq
+            <code>sudo git clone -b v22.0 https://github.com/bitcoin/bitcoin.git &&
+          cd bitcoin && sudo ./autogen.sh && sudo ./configure --enable-cxx --with-zmq
           --with-incompatible-bdb --with-gui --enable-util-cli --enable-util-tx
-          --enable-util-wallet && make -j "$(($(nproc)+1))" && make
+          --enable-util-wallet && sudo make -j "$(($(nproc)+1))" && sudo make
           install</code>
             <br /><br /> 2) Once completed, launch the Bitcoin Core client GUI using the following command:
             <br /><br />
@@ -642,6 +643,11 @@
         </blockquote>
         <br /><br />
         <h3><i>Set Up a Lightning Network Node (<a href="https://github.com/lightningnetwork/lnd">LND</a>)</i></h3>
+        <br><br>Learn about the Lightning Network here: <a href="https://lightning.network/">https://lightning.network/</a>, or here for a more advanced look: <a href="https://dev.lightning.community/overview/">https://dev.lightning.community/overview/</a>
+        <br><br>There are also managed solutions like <a href="https://voltage.cloud/">Voltage</a> for nodes if you would like a less manual approach to quickly get set up to accept Bitcoin via lightning at your business. After setting up your Voltage
+        account, you can connect an app like <a href="https://zaphq.io/download">Zap</a> on your phone to accept payments for goods and services.
+        <br><br>If you don't have a business and would like a less manual approach overall, check out <a href="https://getumbrel.com/">Umbrel</a>.
+        <br><br>If you don't care to self-host a lightning node at all, you can use any wallet phone app that supports the lightning network like Blockstream Green, Muun, and more.
         <br /><br />
         <b>a. Installation Steps</b>
         <br /><br />
@@ -655,15 +661,16 @@
             <code>git clone https://github.com/lightningnetwork/lnd.git</code>
             <br /><br /> 3) Run the following command:
             <br /><br />
-            <code>cd lnd && git checkout v0.13.3-beta && make && make install
+            <code>cd lnd && git checkout v0.14.1-beta && make && make install
           tags="autopilotrpc chainrpc invoicesrpc routerrpc signrpc walletrpc
           watchtowerrpc wtclientrpc"</code>
             <br /><br /> 4) Create the LND config directory, copy and modify the sample configuration file:
             <br /><br />
-            <code>sudo mkdir ~/.lnd && cp sample_lnd.conf ~/.lnd/lnd.conf && nano
-          lnd.conf</code>
-            <br /><br /> Add your “rpcuser” and “rpcpassword” you set in the bitcoin.conf file when you set up the Bitcoin Core client. It is located at “~/.bitcoin”.
-            <br /><br /> 5) Reboot the machine.
+            <code>mkdir ~/.lnd/ && cp ~/lnd/sample-lnd.conf ~/.lnd/lnd.conf && nano
+          ~/.lnd/lnd.conf</code>
+            <br><br>Comment out the line that says "bitcoin.node=btcd" and uncomment the line that says "; bitcoin.node=bitcoind", they are next to eachother.
+            <br><br> Then, under the "[Bitcoin]" heading, comment out the line that says "bitcoin.simnet=true" and uncomment the line that says "; bitcoin.mainnet=true".
+            <br /><br /> 5) Save and close the file, then reboot the machine.
         </blockquote>
         <br /><br />
         <b>b. How do I confirm that it is working?</b>
@@ -673,6 +680,14 @@
             <br /><br />
             <code>lnd</code>
             <br /><br /> You should see several lines of output, ending in one from [INF] LTND stating that it is waiting for a wallet password. You can now use lncli from any other terminal.
+
+            <br><br>2) You may now choose to generate a lightning wallet, fund it with a Bitcoin transaction, and allocate some of it to operate a channel between another lightning node. You are rewarded with routing fees when your channel is utilized
+            and your funds are safe in escrow.
+
+            <br><br><a href="https://github.com/lightninglabs/lightning-terminal">Lightning Terminal</a> is a nice tool for node management. If you set up your lightning node by following this guide, you already have the required tags present for LND
+            when we compiled it. You can skip right to the <a href="https://docs.lightning.engineering/lightning-network-tools/lightning-terminal/get-lit#docs-internal-guid-ae172929-7fff-f9d0-7921-e6f8acc92f53">"Install litd" section of this page</a>.
+
+            <br><br>You should also create an account at <a href="https://1ml.com/">1ml.com</a> and register your node so you can see the publicly accessible information about the nodes and channels you're connected to.
         </blockquote>
         <br /><br /><br />
 
@@ -680,7 +695,9 @@
         <!--  -->
         <!--  -->
 
-        <h1>Disaster Scenario Preparation</h1>
+        <a id="disaster-scenario-preparation">
+            <h1>Disaster Scenario Preparation</h1>
+        </a>
         <br /><br />
         <b>What If the Power Goes Out?</b>
         <br /><br /> 1) UPS battery backups
